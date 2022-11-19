@@ -17,6 +17,10 @@ const userSchema = new Schema(
       type: String,
       required: [true, 'Name is required.']
     },
+    favImg: [{
+      type: Schema.Types.ObjectId,
+      ref: 'FavImg'
+    }]
   },
   {
     timestamps: true

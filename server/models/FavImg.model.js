@@ -14,6 +14,10 @@ const favImgSchema = new Schema(
         imageUrl: {
             type: String,
             required: [true, "Image is required"]
+        },
+        owner: {
+            type: Schema.Types.ObjectId,
+            ref: "User",
         }
     },
     {

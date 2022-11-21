@@ -1,4 +1,4 @@
-import { Container, Col, Row } from "react-bootstrap"
+import { Button, Container, Col, Row } from "react-bootstrap"
 import { useEffect, useState } from "react"
 import { useParams, Link } from "react-router-dom"
 import imageService from "../../services/image.services"

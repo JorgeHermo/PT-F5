@@ -1,4 +1,5 @@
-const { useState } = require("react")
+import { useState } from "react"
+import { Form, Button } from "react-bootstrap"
 import imageServices from "./../../services/image.services"
 
 const ImageForm = (loadImages) => {
@@ -9,12 +10,12 @@ const ImageForm = (loadImages) => {
         imageUrl: "",
     })
 
-    handleChange = e => {
+    const handleChange = e => {
         const { value, name } = e.target
         setImageData({ ...imageData, [name]: value })
     }
 
-    handleSubmit = e => {
+    const handleSubmit = e => {
         imageServices
             .createImage(imageData)
             .then(() => {

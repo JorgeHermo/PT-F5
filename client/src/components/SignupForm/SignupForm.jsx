@@ -3,10 +3,11 @@ import { Form, Button } from "react-bootstrap"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import authService from "../../services/auth.services"
+
 const SignupForm = () => {
 
     const [signupData, setSignupData] = useState({
-        username: "",
+        name: "",
         email: "",
         password: ""
     })
@@ -25,19 +26,19 @@ const SignupForm = () => {
             .signup(signupData)
             .then(({ data }) => {
                 console.log(data)
-                navigate("/iniciar-sesion")
+                navigate("/login")
             })
             .catch(err => console.log(err))
     }
 
-    const { username, password, email } = signupData
+    const { name, password, email } = signupData
 
     return (
         <Form onSubmit={handleSubmit}>
 
-            <Form.Group className="mb-3" controlId="username">
+            <Form.Group className="mb-3" controlId="name">
                 <Form.Label>Nombre de usuario</Form.Label>
-                <Form.Control type="text" value={username} onChange={handleInputChange} name="username" />
+                <Form.Control type="text" value={name} onChange={handleInputChange} name="name" />
             </Form.Group>
 
 

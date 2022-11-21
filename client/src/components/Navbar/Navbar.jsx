@@ -31,16 +31,16 @@ const Navigation = () => {
               !user
                 ?
                 <>
-                  <Link to="/registro">
+                  <Link to="/signup">
                     <Nav.Link as="span">Registro</Nav.Link>
                   </Link>
-                  <Link to="/iniciar-sesion">
+                  <Link to="/login">
                     <Nav.Link as="span">Iniciar sesión</Nav.Link>
                   </Link>
                 </>
                 :
                 <>
-                  <Link to="/crear">
+                  <Link to="/create">
                     <Nav.Link as="span">Nueva Imagen</Nav.Link>
                   </Link>
                   <Link to="/">

@@ -11,7 +11,7 @@ const Home = () => {
                     <h1>App Galerie!</h1>
                     <hr />
                     <p>Galeria para tus imagenes favoritas</p>
-                    <Link>
+                    <Link to="/galeria">
                         <Button variant="dark">Galeria</Button>
                     </Link>
                 </Col>

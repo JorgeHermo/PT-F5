@@ -5,7 +5,7 @@ class ImageService {
     constructor() {
 
         this.api = axios.create({
-            baseURL: `${process.env.REACT_APP_API_URL}/coasters`
+            baseURL: `${process.env.REACT_APP_API_URL}/favImg`
         })
 
         this.api.interceptors.request.use((config) => {

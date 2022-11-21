@@ -4,7 +4,7 @@ import { AuthContext } from "../../contexts/auth.context"
 import { Link } from "react-router-dom"
 import { Nav, Navbar, Container } from "react-bootstrap"
 
-const Navbar = () => {
+const Navigation = () => {
 
   const { user, logoutUser } = useContext(AuthContext)
 
@@ -57,4 +57,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navigation

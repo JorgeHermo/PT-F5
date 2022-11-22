@@ -1,6 +1,6 @@
 import { Form, Button } from "react-bootstrap"
 import { useContext, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Navigate } from "react-router-dom"
 import authService from "./../../services/auth.services.js"
 import { AuthContext } from "./../../contexts/auth.context"
 
@@ -11,7 +11,6 @@ const LoginForm = () => {
     })
 
     const { storeToken, authenticateUser } = useContext(AuthContext)
-    const navigate = useNavigate()
 
     const handleInputChange = e => {
         const { value, name } = e.target
@@ -27,6 +26,7 @@ const LoginForm = () => {
                 console.log("login data ---->>>", data)
                 storeToken(data.authToken)
                 authenticateUser()
+                Navigate("/")
             })
             .catch(err => console.log(err))
     }

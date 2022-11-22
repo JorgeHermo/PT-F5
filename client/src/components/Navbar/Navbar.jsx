@@ -44,7 +44,7 @@ const Navigation = () => {
                     <Nav.Link as="span">Nueva Imagen</Nav.Link>
                   </Link>
                   <Link to="/">
-                    <Nav.Link as="span">Perfil de {user.username}</Nav.Link>
+                    <Nav.Link as="span">Perfil de {user.name}</Nav.Link>
                   </Link>
                   <Nav.Link as="span" onClick={logout}>Cerrar sesión</Nav.Link>
                 </>
